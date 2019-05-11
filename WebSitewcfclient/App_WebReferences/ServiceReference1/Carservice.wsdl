@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Carservice" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/Carservice?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/Carservice?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/Carservice?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Carrental" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Icarservice_getcars_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcars" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_getcars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCarByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarByName" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCarByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCarBySeatingcap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarBySeatingcap" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetCarBySeatingcap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarBySeatingcapResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_giveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:giveUser" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_giveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:giveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_giveUserCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:giveUserCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_giveUserCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:giveUserCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_AddUserCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_AddUserCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_getUsercars_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsercars" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_getUsercars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsercarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_getUserCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_getUserCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_UpdateUserCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_UpdateUserCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_DeleteUserCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserCar" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_DeleteUserCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetUserByMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMail" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetUserByMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_CheckUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUser" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_CheckUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="Icarservice_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Icarservice">
+    <wsdl:operation name="getcars">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/getcars" message="tns:Icarservice_getcars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/getcarsResponse" message="tns:Icarservice_getcars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/GetCar" message="tns:Icarservice_GetCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/GetCarResponse" message="tns:Icarservice_GetCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/GetCarByName" message="tns:Icarservice_GetCarByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/GetCarByNameResponse" message="tns:Icarservice_GetCarByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCarBySeatingcap">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/GetCarBySeatingcap" message="tns:Icarservice_GetCarBySeatingcap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/GetCarBySeatingcapResponse" message="tns:Icarservice_GetCarBySeatingcap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="giveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/giveUser" message="tns:Icarservice_giveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/giveUserResponse" message="tns:Icarservice_giveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="giveUserCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/giveUserCar" message="tns:Icarservice_giveUserCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/giveUserCarResponse" message="tns:Icarservice_giveUserCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/AddUser" message="tns:Icarservice_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/AddUserResponse" message="tns:Icarservice_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/AddUserCar" message="tns:Icarservice_AddUserCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/AddUserCarResponse" message="tns:Icarservice_AddUserCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsercars">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/getUsercars" message="tns:Icarservice_getUsercars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/getUsercarsResponse" message="tns:Icarservice_getUsercars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/getUserCar" message="tns:Icarservice_getUserCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/getUserCarResponse" message="tns:Icarservice_getUserCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/UpdateUserCar" message="tns:Icarservice_UpdateUserCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/UpdateUserCarResponse" message="tns:Icarservice_UpdateUserCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/DeleteUserCar" message="tns:Icarservice_DeleteUserCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/DeleteUserCarResponse" message="tns:Icarservice_DeleteUserCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/GetUserByMail" message="tns:Icarservice_GetUserByMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/GetUserByMailResponse" message="tns:Icarservice_GetUserByMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/CheckUser" message="tns:Icarservice_CheckUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/CheckUserResponse" message="tns:Icarservice_CheckUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/Icarservice/GetUserById" message="tns:Icarservice_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Icarservice/GetUserByIdResponse" message="tns:Icarservice_GetUserById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Icarservice" type="tns:Icarservice">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getcars">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/getcars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/GetCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarByName">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/GetCarByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCarBySeatingcap">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/GetCarBySeatingcap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="giveUser">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/giveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="giveUserCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/giveUserCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/AddUserCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsercars">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/getUsercars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/getUserCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/UpdateUserCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserCar">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/DeleteUserCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMail">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/GetUserByMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/CheckUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/Icarservice/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Carservice">
+    <wsdl:port name="BasicHttpBinding_Icarservice" binding="tns:BasicHttpBinding_Icarservice">
+      <soap:address location="http://localhost:8000/Carservice/Carservice" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
