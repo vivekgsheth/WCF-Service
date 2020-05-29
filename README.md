@@ -96,6 +96,12 @@ Data contract : user,car,usercar
 
 CarService.cs : <br/>
 Implements Icarservice and has definintions of all the methods.<br/>
+.Net local db was used and Disconencted Access was used to manipulate the db.<br/>
 
+Service Endpoints : <br/>
+A: "", B: basicHttpBinding, C: Carrental.Icarservice<br/>
+
+Metadata Endpoints : (The Metadata Exchange endpoint is used by the service to describe itself to clients.)<br/>
+A: mex, B: mexHttpBinding, C: IMetadataExchange<br/>
 
 
