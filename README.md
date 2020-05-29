@@ -75,7 +75,7 @@ Contract
  
 Contract is the third important question. What functionality and operation is being provided by  the service is called contract. It specifies what functionality and operations are need to be exposed to the client. It is the interface name which has all operation that need to be exposed.
 
-#3Hosting
+## Hosting
 
 Hosting is the important thing in WCF Application and it makes WCF Application different from other distributed Applications. WCF supports following types of hosting-
 IIS Hosting
@@ -85,3 +85,17 @@ WAS hosting
 ## SOAP
 
 SOAP stands for Simple Object Access Protocol. It is not a transport protocol but an  XML based message protocol.
+
+
+# Working
+
+WCF : <br/>
+Service contract : Icarservice <br/>
+Operation contract : getCars(),AddUser(),AddUserCar(),UpdateUSerCar(),DelUserCar [CRUD] <br/>
+Data contract : user,car,usercar
+
+CarService.cs : <br/>
+Implements Icarservice and has definintions of all the methods.<br/>
+
+
+
