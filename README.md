@@ -112,5 +112,23 @@ A: mex, B: mexHttpBinding, C: IMetadataExchange<br/>
 Host the service using http protocol and type of service(Carservice)<br/>
 2 <endpoint A=,B=,C=>  1. for service 2, for metadata<br/>
  
-  
-  
+## Clients
+
+###### 1. Asp.net
+
+The client first have to register and login to use the service. The session is maintained using "Session object"<br/>
+The client can get avail cars , book a car,  update ride, delete ride. <br/>
+First , the servicereference is taken into a var and using that the services are used. <br/>
+
+
+###### 2. Java
+
+Created servlet by storing <servlet> & <servlet-mapping> details in web.xml <br/>
+First we need to enter the WSDL url to consume the service <br/>
+TO use the type of data of service we cando by using "org.datacontract.schemas._2004._07.carrental" <br/>
+WE can use "org.tempuri" to create a service reference <br/>
+Normal CRUD operations were developed using Servlet doGet(),doPost() methods and JSP <br/>
+
+
+
+ 
