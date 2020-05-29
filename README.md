@@ -13,15 +13,15 @@ Distributed Application
 
 It means those Applications, which do not run only on single system but can run on multiple systems, which are connected over the network. For example, a Web Service that can consume by different clients.
 
-Interoperable
+## Interoperable
 
 It means that an Application can consume or connect with another Application but it does not matter in which platform it is developed.
 
-Example
+## Example
 
 Web Service is interoperable because it can be consume from any client, either it is from Java or .NET but on a remote basis, it is not interoperable because if we want to consume any remote service from the client, client Application must be developed in .NET.
 
-Why we need WCF Applications
+## Why we need WCF Applications
 
 In this, I am explaining why we need WCF Application, if we already have Web Service.
 
@@ -29,19 +29,20 @@ Suppose, you have two clients- one wants to use a Web Service, which sends data 
 
 The other wants to send the data, using Web Service over the network, using TCP protocol and replying in binary format, then we need to implement a remote Web service with TCP protocol.
 
-Problem
+## Problem
 
 The problem is in the example, shown above, we need to create two different Services for two different clients .WCF is solving this problem and one single service can be consumed by two different clients- either they want same protocol or a different protocol. We specify the protocol name in an endpoint attribute of the Web Service.
 
-WCF
+## WCF
 
 There are three parts of WCF Application or we can say it consists of three things, which are-
 WCF Service : What is the service and what it is providing.
 WCF Service host: Where is the Service hosted.
 Service Client: Who is the client of the Service.
-Fundamentals of WCF
+<br/>
+## Fundamentals of WCF
 
-Message
+## Message
 
 Message is the communication unit, as it is in the form of an envelop. The transmission of the data from the client to Service and Service to client is being done by envelop. The envelop or message has the sections, given below-
 Header 
@@ -50,7 +51,7 @@ By default Header and fault are disabled but Body is responsible for the data tr
 
 Header is useful to send some data from client to Server. Suppose we want to send user name from each request but don’t want to send it by an argument, we can easily add it into message header.
 
-Endpoint
+## Endpoint
 
 Endpoint is a very essential part of WCF Application, as it describes the address of Web Service from where a user can receive and send the message. It also specifies the communication mechanism of how the message will be sent or received.
 
@@ -74,12 +75,13 @@ Contract
  
 Contract is the third important question. What functionality and operation is being provided by  the service is called contract. It specifies what functionality and operations are need to be exposed to the client. It is the interface name which has all operation that need to be exposed.
 
-Hosting
+#3Hosting
 
 Hosting is the important thing in WCF Application and it makes WCF Application different from other distributed Applications. WCF supports following types of hosting-
 IIS Hosting
 Self hosting 
 WAS hosting
-SOAP
+
+## SOAP
 
 SOAP stands for Simple Object Access Protocol. It is not a transport protocol but an  XML based message protocol.
