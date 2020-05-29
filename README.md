@@ -89,6 +89,8 @@ SOAP stands for Simple Object Access Protocol. It is not a transport protocol bu
 
 # Working
 
+## Service
+
 WCF : <br/>
 Service contract : Icarservice <br/>
 Operation contract : getCars(),AddUser(),AddUserCar(),UpdateUSerCar(),DelUserCar [CRUD] <br/>
@@ -105,3 +107,10 @@ Metadata Endpoints : (The Metadata Exchange endpoint is used by the service to d
 A: mex, B: mexHttpBinding, C: IMetadataExchange<br/>
 
 
+## Host
+
+Host the service using http protocol and type of service(Carservice)<br/>
+2 <endpoint A=,B=,C=>  1. for service 2, for metadata<br/>
+ 
+  
+  
